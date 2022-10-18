@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\С#\\Piano\\Piano.csproj": {}
+    "C:\\Users\\User\\OneDrive\\Рабочий стол\\С#\\Piano\\Piano.csproj": {}
   },
   "projects": {
-    "D:\\С#\\Piano\\Piano.csproj": {
+    "C:\\Users\\User\\OneDrive\\Рабочий стол\\С#\\Piano\\Piano.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\С#\\Piano\\Piano.csproj",
+        "projectUniqueName": "C:\\Users\\User\\OneDrive\\Рабочий стол\\С#\\Piano\\Piano.csproj",
         "projectName": "Piano",
-        "projectPath": "D:\\С#\\Piano\\Piano.csproj",
+        "projectPath": "C:\\Users\\User\\OneDrive\\Рабочий стол\\С#\\Piano\\Piano.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\С#\\Piano\\obj\\",
+        "outputPath": "C:\\Users\\User\\OneDrive\\Рабочий стол\\С#\\Piano\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

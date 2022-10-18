@@ -15,64 +15,52 @@ namespace Пианино
             while (true)
             {
                 int[] lol = Octave();
+                
                 if (lol == Octave1)
                 {
-                    Console.WriteLine("Первая октава: ");
                     Sound(lol);
                 }
                 if (lol == Octave2)
                 {
-                    Console.WriteLine("Вторая октава");
                     Sound(lol);
 
                 }
                 else if (lol == Octave3)
                 {
-                    Console.WriteLine("Третья октава");
                     Sound(lol);
                 }
                 else if (lol == Octave4)
                 {
-                    Console.WriteLine("Четвертая октава: ");
                     Sound(lol);
                 }
                 else if (lol == Octave5)
                 {
-                    Console.WriteLine("Пятая октава");
                     Sound(lol);
                 }
             }
             static int[] Octave()
             {
                 int[] poop = new int[13];
-                {
-                    ConsoleKeyInfo Key = Console.ReadKey();
-                    Console.WriteLine(Key.Key);
-                    if (Key.Key == ConsoleKey.F1)
+                
+                    ConsoleKey Key = Console.ReadKey(true).Key;
+                    switch (Key)
                     {
-                        Console.WriteLine("Первая октава: ");
-                        poop = Octave1;
-                        return poop;
+
+                        case ConsoleKey.F1:
+                            poop = Octave1;
+                            return poop;
+                        case ConsoleKey.F2:
+                            poop = Octave2;
+                            return poop;
+                        case ConsoleKey.F3:
+                            poop = Octave3;
+                            return poop;
+                        case ConsoleKey.F4:
+                            poop = Octave4;
+                            return poop;
                     }
-                    else if (Key.Key == ConsoleKey.F2)
-                    {
-                        Console.WriteLine("Вторая октава: ");
-                        poop = Octave2;
-                        return poop;
-                    }
-                    else if (Key.Key == ConsoleKey.F3)
-                    {
-                        Console.WriteLine("Третья октава: ");
-                        poop = Octave3;
-                        return poop;
-                    }
-                    else if (Key.Key == ConsoleKey.F4)
-                    {
-                        Console.WriteLine("Четвертая октава: ");
-                        poop = Octave4;
-                        return poop;
-                    }
-                    else if (Key.Key == ConsoleKey.F5)
+                    
+                    if (Key == ConsoleKey.F5)
                     {
                         Console.WriteLine("Пятая октава");
                         poop = Octave5;
@@ -85,28 +73,46 @@ namespace Пианино
                             "Клавиши: D, R, F, T, G, H, U, J, I, K, L");
                         return poop;
                     }
-                }
-                }
             }
+        }
 
         static int[] Sound(int[] lol)
         {
             int[] clavisha = new int[13];
             while (true)
             {
-                ConsoleKey KeySound = Console.ReadKey().Key;
+                if (lol == Octave1)
+                {
+                    Console.WriteLine("Первая октава: ");
+                }
+                if (lol == Octave2)
+                {
+                    Console.WriteLine("Вторая октава");
+
+                }
+                else if (lol == Octave3)
+                {
+                    Console.WriteLine("Третья октава");
+                }
+                else if (lol == Octave4)
+                {
+                    Console.WriteLine("Четвертая октава: ");
+                }
+                else if (lol == Octave5)
+                {
+                    Console.WriteLine("Пятая октава");
+                }
+                ConsoleKey KeySound = Console.ReadKey(true).Key;
                 switch (KeySound)
                 {
                     case ConsoleKey.D:
                         Console.Beep(lol[0], 250);
                         Console.Clear();
                         continue;
-                        break;
                     case ConsoleKey.R:
                         Console.Beep(lol[1], 250);
                         Console.Clear();
                         continue;
-                        break;
                     case ConsoleKey.F:
                         Console.Beep(lol[2], 250);
                         Console.Clear();
@@ -121,67 +127,53 @@ namespace Пианино
                         Console.Beep(lol[4], 250);
                         Console.Clear();
                         continue;
-                        break;
                     case ConsoleKey.Y:
                         Console.Beep(lol[5], 250);
                         Console.Clear();
                         continue;
-                        break;
                     case ConsoleKey.H:
                         Console.Beep(lol[6], 250);
                         Console.Clear();
                         continue;
-                        break;
                     case ConsoleKey.U:
                         Console.Beep(lol[7], 250);
                         Console.Clear();
                         continue;
-                        break;
                     case ConsoleKey.J:
                         Console.Beep(lol[8], 250);
                         Console.Clear();
                         continue;
-                        break;
                     case ConsoleKey.I:
                         Console.Beep(lol[9], 250);
                         Console.Clear();
                         continue;
-                        break;
                     case ConsoleKey.K:
                         Console.Beep(lol[10], 250);
                         Console.Clear();
                         continue;
-                        break;
                     case ConsoleKey.L:
                         Console.Beep(lol[11], 250);
                         Console.Clear();
                         continue;
-                        break;
               
                     case ConsoleKey.F1:
                         lol = Octave1;
                         return lol;
-                        break;
                     case ConsoleKey.F2:
                         lol = Octave2;
                         return lol;
-                        break;
                     case ConsoleKey.F3:
                         lol = Octave3;
                         return lol;
-                        break;
                     case ConsoleKey.F4:
                         lol = Octave4;
                         return lol;
-                        break;
                     case ConsoleKey.F5:
                         lol = Octave5;
                         return lol;
-                        break;
                     default:
                         Console.Clear();
                         continue;
-                        break;
 
                 }
             }
